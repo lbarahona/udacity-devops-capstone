@@ -4,7 +4,7 @@ pipeline{
     stages{
         stage("Test Lint"){
             steps{
-                sh "tidy --drop-empty-elements false --drop-empty-paras false -qe public/*.html"
+                sh "tidy --drop-empty-elements false --drop-empty-paras false -qe app/*.html"
                 sh "hadolint Dockerfile"
             }
         }
